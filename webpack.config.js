@@ -25,16 +25,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-              outputPath: 'images/'
-            }
-          }
-        ]
-      }
+        type: 'src/static/images',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
+      },
     ]
   },
   plugins: [
@@ -46,7 +41,12 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(dotenv.parsed)
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/static/images', to: 'images' },
+      ],
+    }),
   ],
   devServer: {
     static: {
