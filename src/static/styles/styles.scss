@@ -40,7 +40,7 @@ header {
 
   &:has(> .hovered) {
     &:before {
-      box-shadow: '6px 0px 15px #abaaaa';
+      box-shadow: 6px 0px 15px #abaaaa;
     }
   }
 
@@ -48,7 +48,7 @@ header {
     display: block;
     width: 60px;
     height: 60px;
-    background: 'url(/images/logo-form.svg) center center/contain no-repeat';
+    background: url(images/logo-form.svg) center center/contain no-repeat;
     margin: 0 auto;
     position: relative;
     margin-top: 10px;
@@ -61,7 +61,7 @@ header {
       width: 50px;
       height: 50px;
       transform: translate(-50%, -50%);
-      background: 'url(/images/plane.svg) center center/contain no-repeat';
+      background: url(images/plane.svg) center center/contain no-repeat;
     }
   }
 }
@@ -79,8 +79,8 @@ header {
   .flights__filters {
     width: 30%;
     background-color: #fff;
-    border-radius: '7px';
-    box-shadow: '0px 2px 8px 0px #0000001a';
+    border-radius: 7px;
+    box-shadow: 0px 2px 8px 0px #0000001a;
     padding-bottom: 10px;
 
     @include w640 {
@@ -130,7 +130,7 @@ header {
             content: '';
             width: 12px;
             height: 8px;
-            background: 'url(/images/checkit.svg) center center/contain no-repeat';
+            background: url(images/checkit.svg) center center/contain no-repeat;
           }
 
           &:checked {
@@ -205,7 +205,7 @@ header {
       row-gap: 18px;
 
       .flights__card {
-        box-shadow: '0px 2px 8px 0px #0000001a';
+        box-shadow: 0px 2px 8px 0px #0000001a;
         background-color: #fff;
         border-radius: 7px;
         padding: 20px;
@@ -224,7 +224,7 @@ header {
           .card__logo {
             width: 119px;
             height: 45px;
-            background: 'url(/images/a4e-logo.png) center center/contain no-repeat';
+            background: url(images/a4e-logo.png) center center/contain no-repeat;
           }
         }
 

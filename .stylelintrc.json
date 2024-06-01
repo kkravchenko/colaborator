@@ -5,6 +5,9 @@
     "selector-pseudo-element-colon-notation": null,
     "property-no-vendor-prefix": null,
     "scss/at-mixin-pattern": null,
-    "declaration-empty-line-before": null
+    "declaration-empty-line-before": null,
+    "function-url-quotes": null,
+    "length-zero-no-unit": null,
+    "import-notation": null,
   }
 }
