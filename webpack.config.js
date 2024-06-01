@@ -6,7 +6,7 @@ const dotenv = require('dotenv').config({ path: __dirname + '/.env' })
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -38,7 +38,7 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist')
+      directory: path.join(__dirname, 'build')
     },
     compress: true,
     port: 3000
