@@ -1,0 +1,6 @@
+export * from './pages/Flights/Flights'
+export * from './shared/Header'
+export * from './widgets/Filters/Filters'
+export * from './widgets/Sort/Sort'
+export * from './widgets/FlightsData/FlightsData'
+export * from './widgets/More/More'

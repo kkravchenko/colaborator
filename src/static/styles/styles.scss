@@ -1,0 +1,273 @@
+@use 'scss-reset/reset';
+@import './variables';
+@import './mixin';
+@import "url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')";
+
+body {
+  font:
+    normal normal normal 14px/1.3em 'Open Sans',
+    sans-serif;
+  max-width: 830px;
+  padding: 0 30px;
+  margin: 0 auto;
+  background-color: #f3f7fa;
+
+  @include w480 {
+    max-width: 800px;
+    padding: 0 15px;
+  }
+}
+
+* {
+  outline: none;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.8;
+}
+
+header {
+  &:before {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 1px 9px 15px #abaaaa;
+    border-radius: 50%;
+  }
+
+  &:has(> .hovered) {
+    &:before {
+      box-shadow: '6px 0px 15px #abaaaa';
+    }
+  }
+
+  .logo {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: 'url(../images/logo-form.svg) center center/contain no-repeat';
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      transform: translate(-50%, -50%);
+      background: 'url(../images/plane.svg) center center/contain no-repeat';
+    }
+  }
+}
+
+.flights {
+  display: flex;
+  gap: 36px;
+  margin: 30px 0;
+  align-items: flex-start;
+
+  @include w640 {
+    flex-direction: column;
+  }
+
+  .flights__filters {
+    width: 30%;
+    background-color: #fff;
+    border-radius: '7px';
+    box-shadow: '0px 2px 8px 0px #0000001a';
+    padding-bottom: 10px;
+
+    @include w640 {
+      width: 100%;
+    }
+
+    h2 {
+      color: $color-black-head;
+      padding: 15px 15px 10px;
+
+      @include textStyle(13px, 600, 20px);
+    }
+
+    .flights__filterslist {
+      display: flex;
+      flex-direction: column;
+
+      .flights__filter {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 15px;
+
+        &:hover {
+          background-color: $color-hover;
+        }
+
+        input {
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          -o-appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 1px solid $color-checkbox-border;
+          border-radius: 2px;
+          position: relative;
+
+          &:after {
+            visibility: hidden;
+            transition: all 0.1s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: '';
+            width: 12px;
+            height: 8px;
+            background: 'url(../images/checkit.svg) center center/contain no-repeat';
+          }
+
+          &:checked {
+            border-color: $color-active;
+
+            &:after {
+              visibility: visible;
+            }
+          }
+        }
+
+        span {
+          color: $color-black-text;
+
+          @include textStyle(13px, 300, 20px);
+        }
+      }
+    }
+  }
+
+  .fligts__data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include w640 {
+      width: 100%;
+    }
+
+    .flights__sort {
+      height: 50px;
+      width: 100%;
+      border: 1px solid $color-border;
+      display: flex;
+      align-items: center;
+      border-radius: 7px;
+
+      .sort__item {
+        width: 33.3%;
+
+        @include textStyle(12px, 600, 20px);
+
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        border: 1px solid $color-border;
+        height: 100%;
+        background-color: #fff;
+
+        @include w480 {
+          @include textStyle(11px, 600, 20px);
+        }
+
+        &.active {
+          background-color: $color-active;
+          color: #fff;
+        }
+
+        &:first-child {
+          border-radius: 7px 0 0 7px;
+        }
+
+        &:last-child {
+          border-radius: 0 7px 7px 0;
+        }
+      }
+    }
+
+    .flights__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 18px;
+
+      .flights__card {
+        box-shadow: '0px 2px 8px 0px #0000001a';
+        background-color: #fff;
+        border-radius: 7px;
+        padding: 20px;
+
+        .card__data {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .card__price {
+            @include textStyle(24px, 600, 24px);
+
+            color: $color-active;
+          }
+
+          .card__logo {
+            width: 119px;
+            height: 45px;
+            background: 'url(../images/a4e-logo.png) center center/contain no-repeat';
+          }
+        }
+
+        .card__flight {
+          display: flex;
+          margin-top: 10px;
+          gap: 20px;
+
+          .card__detail {
+            width: 33.3%;
+            display: flex;
+            flex-direction: column;
+
+            .card__info {
+              @include textStyle(12px, 600, 18px);
+              letter-spacing: 0.5px;
+              color: $color-light;
+            }
+
+            .card__value {
+              @include textStyle(14px, 400, 21px);
+
+              color: $color-black-text;
+            }
+          }
+        }
+      }
+
+      .fligths__more {
+        width: 100%;
+        height: 50px;
+        border-radius: 7px;
+        background-color: $color-active;
+        color: #fff;
+
+        @include textStyle(12px, 600, 20px);
+
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+}

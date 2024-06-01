@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "price": 13300,
+    "name": "HKG",
+    "out": "LHR",
+    "outtime": "34г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "16г 30хв",
+    "replane": "1 пересадка"
+  },
+  {
+    "id": 2,
+    "price": 15100,
+    "name": "HKG, JNB",
+    "out": "LHR",
+    "outtime": "17г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "40г 30хв",
+    "replane": "2 пересадки"
+  },
+  {
+    "id": 3,
+    "price": 15400,
+    "name": "HKG",
+    "out": "LHR",
+    "outtime": "20г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "12г 30хв",
+    "replane": "1 пересадка"
+  },
+  {
+    "id": 4,
+    "price": 21400,
+    "name": "HKG, JNB, JNB",
+    "out": "LHR",
+    "outtime": "21г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "12г 30хв",
+    "replane": "2 пересадки"
+  },
+  {
+    "id": 5,
+    "price": 23900,
+    "name": "HKG, JNB, JNB",
+    "out": "LHR",
+    "outtime": "11г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "9г 30хв",
+    "replane": "Без пресадок"
+  },
+  {
+    "id": 6,
+    "price": 21500,
+    "name": "HKG",
+    "out": "LHR",
+    "outtime": "7г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "6г 30хв",
+    "replane": "3 пересадки"
+  },
+  {
+    "id": 7,
+    "price": 19100,
+    "name": "HKG, JNB",
+    "out": "LHR",
+    "outtime": "15г 15хв",
+    "outtimeinterval": "10:45 - 8:00",
+    "intimeinterval": "11:20 - 00:50",
+    "in": "DXB",
+    "inttime": "11г 30хв",
+    "replane": "Без пресадок"
+  }
+]

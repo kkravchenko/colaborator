@@ -1,0 +1,20 @@
+$screen-480-max: 480px;
+$screen-640-max: 640px;
+
+@mixin w480 {
+  @media (max-width: #{$screen-480-max}) {
+    @content;
+  }
+}
+
+@mixin w640 {
+  @media (max-width: #{$screen-640-max}) {
+    @content;
+  }
+}
+
+@mixin textStyle($fontSize, $fontWeight, $lineHeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}

@@ -1,0 +1,85 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "jest": true
+  },
+  "extends": ["airbnb", "prettier", "@wemake-services/typescript/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "tsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "react-hooks", "unicorn"],
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variableLike",
+        "format": ["camelCase", "PascalCase"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true
+        }
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "arrow-parens": 0,
+    "id-length": 0,
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "import/extensions": "off",
+    "react/prop-types": 0,
+    "no-console": 0,
+    "comma-dangle": ["error", "never"],
+    "quote-props": 0,
+    "react/react-in-jsx-scope": "off",
+    "id-denylist": ["error", "data", "err", "e", "cb", "callback"],
+    "jsx-a11y/label-has-associated-control": 0,
+    "max-len": ["error", { "code": 180 }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-param-reassign": "off",
+    "react/self-closing-comp": "off",
+    "@typescript-eslint/no-extra-parens": "off",
+    "react/jsx-no-useless-fragment": "off"
+  }
+}
