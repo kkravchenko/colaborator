@@ -2,7 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const dotenv = require('dotenv').config({ path: __dirname + '/.env' })
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
@@ -30,7 +30,7 @@ module.exports = {
         generator: {
           filename: 'images/[hash][ext][query]'
         }
-      },
+      }
     ]
   },
   plugins: [
@@ -44,10 +44,11 @@ module.exports = {
       'process.env': JSON.stringify(dotenv.parsed)
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/static/images', to: 'images' },
-      ],
+      patterns: [{ from: 'src/static/images', to: 'images' }]
     }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'public/favicon.svg', to: '' }]
+    })
   ],
   devServer: {
     static: {
