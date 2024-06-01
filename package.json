@@ -2,7 +2,7 @@
   "name": "colaborator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kkravchenko.github.com/colaborator",
+  "homepage": "https://kkravchenko.github.io/colaborator",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "@testing-library/jest-dom": "^5.17.0",
@@ -23,7 +23,7 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{ts,tsx}"
